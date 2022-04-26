@@ -54,6 +54,7 @@ async function run() {
       res.send(result);
     });
 
+    //get api
     app.get("/myorder", async (req, res) => {
       const cursor = orderCollection.find({});
       const result = await cursor.toArray();
